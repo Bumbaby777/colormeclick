@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Clickme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+    
+</head>
+
+body{
+	min-height: 100vh;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+.colorBtn{
+	padding: 0:25rem 0.5rem;
+	border: 3pc solid #fefefe;
+	border-radius: 7px;
+	color: #fefefe;
+	background: rgba(0,0,0,0,9);
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	cursor: pointer;
+	outline: none;
+}
+.colorBtn:hover{
+	background: green;
+}
+<body>
+<h1> Javascript alerts</h1>
+<button type="button" class="colorBtn">press here to change colors</button>
+  <script src="main.js"></script>
+const colorBtn = document.querySelector('.colorBtn');
+const bodyBcg = document.querySelector('body');
+
+const colors = ['yellow', 'red', 'blue', 'pink', 'olive'];
+
+colorBtn.addEventListener('click',changeColor);
+
+function changeColor(){
+	//bodyBcg.style.backgroundColor = colors[1];
+	let random = Math.floor(Math.random()*colors.length)
+	bodyBcg.style.backgroundColor = colors[random];
+}
+ 
+</body>
+</html>
